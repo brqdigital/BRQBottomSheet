@@ -15,6 +15,12 @@
 		5173607D22DF8F3C00BB29BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5173607B22DF8F3C00BB29BD /* Main.storyboard */; };
 		5173607F22DF8F3E00BB29BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5173607E22DF8F3E00BB29BD /* Assets.xcassets */; };
 		5173608222DF8F3E00BB29BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5173608022DF8F3E00BB29BD /* LaunchScreen.storyboard */; };
+		5173608922DF934500BB29BD /* BRQBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5173608722DF934500BB29BD /* BRQBottomSheetViewController.swift */; };
+		5173608A22DF934500BB29BD /* BRQBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5173608822DF934500BB29BD /* BRQBottomSheetViewController.xib */; };
+		5173608C22DF951100BB29BD /* BRQBottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5173608B22DF951100BB29BD /* BRQBottomSheetViewModel.swift */; };
+		5173608E22DF961900BB29BD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5173608D22DF961900BB29BD /* Extensions.swift */; };
+		5173609122DF9F0900BB29BD /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5173608F22DF9F0900BB29BD /* BottomViewController.swift */; };
+		5173609222DF9F0900BB29BD /* BottomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5173609022DF9F0900BB29BD /* BottomViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +47,12 @@
 		5173607E22DF8F3E00BB29BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5173608122DF8F3E00BB29BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5173608322DF8F3E00BB29BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5173608722DF934500BB29BD /* BRQBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRQBottomSheetViewController.swift; sourceTree = "<group>"; };
+		5173608822DF934500BB29BD /* BRQBottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BRQBottomSheetViewController.xib; sourceTree = "<group>"; };
+		5173608B22DF951100BB29BD /* BRQBottomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRQBottomSheetViewModel.swift; sourceTree = "<group>"; };
+		5173608D22DF961900BB29BD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5173608F22DF9F0900BB29BD /* BottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
+		5173609022DF9F0900BB29BD /* BottomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,10 @@
 			children = (
 				5173605A22DF8ED400BB29BD /* BRQBottomSheet.h */,
 				5173605B22DF8ED400BB29BD /* Info.plist */,
+				5173608D22DF961900BB29BD /* Extensions.swift */,
+				5173608722DF934500BB29BD /* BRQBottomSheetViewController.swift */,
+				5173608B22DF951100BB29BD /* BRQBottomSheetViewModel.swift */,
+				5173608822DF934500BB29BD /* BRQBottomSheetViewController.xib */,
 			);
 			path = BRQBottomSheet;
 			sourceTree = "<group>";
@@ -112,6 +128,8 @@
 			children = (
 				5173607722DF8F3C00BB29BD /* AppDelegate.swift */,
 				5173607922DF8F3C00BB29BD /* ViewController.swift */,
+				5173608F22DF9F0900BB29BD /* BottomViewController.swift */,
+				5173609022DF9F0900BB29BD /* BottomViewController.xib */,
 				5173607B22DF8F3C00BB29BD /* Main.storyboard */,
 				5173607E22DF8F3E00BB29BD /* Assets.xcassets */,
 				5173608022DF8F3E00BB29BD /* LaunchScreen.storyboard */,
@@ -199,6 +217,7 @@
 				TargetAttributes = {
 					5173605622DF8ED400BB29BD = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					5173605F22DF8ED400BB29BD = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -233,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5173608A22DF934500BB29BD /* BRQBottomSheetViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5173608222DF8F3E00BB29BD /* LaunchScreen.storyboard in Resources */,
+				5173609222DF9F0900BB29BD /* BottomViewController.xib in Resources */,
 				5173607F22DF8F3E00BB29BD /* Assets.xcassets in Resources */,
 				5173607D22DF8F3C00BB29BD /* Main.storyboard in Resources */,
 			);
@@ -260,6 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5173608922DF934500BB29BD /* BRQBottomSheetViewController.swift in Sources */,
+				5173608E22DF961900BB29BD /* Extensions.swift in Sources */,
+				5173608C22DF951100BB29BD /* BRQBottomSheetViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +301,7 @@
 			files = (
 				5173607A22DF8F3C00BB29BD /* ViewController.swift in Sources */,
 				5173607822DF8F3C00BB29BD /* AppDelegate.swift in Sources */,
+				5173609122DF9F0900BB29BD /* BottomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +460,7 @@
 		5173606C22DF8ED400BB29BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -452,6 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.BRQBottomSheet;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,6 +487,7 @@
 		5173606D22DF8ED400BB29BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -485,6 +513,7 @@
 		5173606F22DF8ED400BB29BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HLXHJ99SHK;
 				INFOPLIST_FILE = BRQBottomSheetTests/Info.plist;
@@ -503,6 +532,7 @@
 		5173607022DF8ED400BB29BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HLXHJ99SHK;
 				INFOPLIST_FILE = BRQBottomSheetTests/Info.plist;

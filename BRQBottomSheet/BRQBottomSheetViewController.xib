@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BRQBottomSheetViewController" customModule="BRQBottomSheet" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="mIu-HO-K5s" id="BPn-dd-HIJ"/>
+                <outlet property="contentViewBottomConstraint" destination="ziq-rO-mGK" id="QL0-K0-Rjc"/>
+                <outlet property="contentViewHeight" destination="FcK-zS-Prb" id="psj-80-JJx"/>
+                <outlet property="view" destination="zNN-qO-LMF" id="mN9-f0-PEq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="zNN-qO-LMF">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIu-HO-K5s">
+                    <rect key="frame" x="0.0" y="696" width="414" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="FcK-zS-Prb"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CId-v9-pGo">
+                    <rect key="frame" x="0.0" y="44" width="414" height="652"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="zVI-Eu-ODI" appends="YES" id="bx1-qn-P44"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="mIu-HO-K5s" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tyL-xc-igB" secondAttribute="top" constant="40" id="4xM-lD-Eut"/>
+                <constraint firstItem="CId-v9-pGo" firstAttribute="top" secondItem="tyL-xc-igB" secondAttribute="top" id="FcW-yS-FLu"/>
+                <constraint firstItem="tyL-xc-igB" firstAttribute="trailing" secondItem="CId-v9-pGo" secondAttribute="trailing" id="Hrs-Cp-F8b"/>
+                <constraint firstItem="CId-v9-pGo" firstAttribute="leading" secondItem="tyL-xc-igB" secondAttribute="leading" id="JI7-VP-SBA"/>
+                <constraint firstItem="mIu-HO-K5s" firstAttribute="leading" secondItem="zNN-qO-LMF" secondAttribute="leading" id="Xdn-d3-BoN"/>
+                <constraint firstItem="mIu-HO-K5s" firstAttribute="top" secondItem="CId-v9-pGo" secondAttribute="bottom" id="cPd-3J-GTZ"/>
+                <constraint firstItem="tyL-xc-igB" firstAttribute="trailing" secondItem="mIu-HO-K5s" secondAttribute="trailing" id="d50-JI-2AP"/>
+                <constraint firstAttribute="bottom" secondItem="mIu-HO-K5s" secondAttribute="bottom" id="ziq-rO-mGK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="tyL-xc-igB"/>
+            <point key="canvasLocation" x="-642" y="125"/>
+        </view>
+        <tapGestureRecognizer id="zVI-Eu-ODI">
+            <connections>
+                <action selector="topViewTap:" destination="-1" id="HVc-mS-TkS"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
