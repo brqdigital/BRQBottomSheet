@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BRQBottomSheetViewController" customModule="BRQBottomSheet" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="mIu-HO-K5s" id="BPn-dd-HIJ"/>
-                <outlet property="contentViewBottomConstraint" destination="ziq-rO-mGK" id="QL0-K0-Rjc"/>
+                <outlet property="contentViewBottomConstraint" destination="Hgj-eE-21K" id="DeS-Cb-X87"/>
                 <outlet property="contentViewHeight" destination="FcK-zS-Prb" id="psj-80-JJx"/>
                 <outlet property="view" destination="zNN-qO-LMF" id="mN9-f0-PEq"/>
             </connections>
@@ -24,14 +24,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIu-HO-K5s">
-                    <rect key="frame" x="0.0" y="696" width="414" height="200"/>
+                    <rect key="frame" x="0.0" y="662" width="414" height="200"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="FcK-zS-Prb"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CId-v9-pGo">
-                    <rect key="frame" x="0.0" y="44" width="414" height="652"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="618"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <gestureRecognizers/>
                     <connections>
@@ -44,15 +44,15 @@
             <constraints>
                 <constraint firstItem="mIu-HO-K5s" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tyL-xc-igB" secondAttribute="top" constant="40" id="4xM-lD-Eut"/>
                 <constraint firstItem="CId-v9-pGo" firstAttribute="top" secondItem="tyL-xc-igB" secondAttribute="top" id="FcW-yS-FLu"/>
+                <constraint firstItem="tyL-xc-igB" firstAttribute="bottom" secondItem="mIu-HO-K5s" secondAttribute="bottom" id="Hgj-eE-21K"/>
                 <constraint firstItem="tyL-xc-igB" firstAttribute="trailing" secondItem="CId-v9-pGo" secondAttribute="trailing" id="Hrs-Cp-F8b"/>
                 <constraint firstItem="CId-v9-pGo" firstAttribute="leading" secondItem="tyL-xc-igB" secondAttribute="leading" id="JI7-VP-SBA"/>
                 <constraint firstItem="mIu-HO-K5s" firstAttribute="leading" secondItem="zNN-qO-LMF" secondAttribute="leading" id="Xdn-d3-BoN"/>
                 <constraint firstItem="mIu-HO-K5s" firstAttribute="top" secondItem="CId-v9-pGo" secondAttribute="bottom" id="cPd-3J-GTZ"/>
                 <constraint firstItem="tyL-xc-igB" firstAttribute="trailing" secondItem="mIu-HO-K5s" secondAttribute="trailing" id="d50-JI-2AP"/>
-                <constraint firstAttribute="bottom" secondItem="mIu-HO-K5s" secondAttribute="bottom" id="ziq-rO-mGK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="tyL-xc-igB"/>
-            <point key="canvasLocation" x="-642" y="125"/>
+            <point key="canvasLocation" x="-642.02898550724638" y="124.55357142857142"/>
         </view>
         <tapGestureRecognizer id="zVI-Eu-ODI">
             <connections>

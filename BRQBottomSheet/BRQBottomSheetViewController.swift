@@ -67,7 +67,7 @@ public class BRQBottomSheetViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        contentView.alpha = 0
+        contentView.alpha = 1
         configureChild()
         
         let gesture = UIPanGestureRecognizer(target: self, action: #selector(BRQBottomSheetViewController.panGesture))
@@ -88,9 +88,8 @@ public class BRQBottomSheetViewController: UIViewController {
             contentViewHeight.isActive = false
         }
         
-        contentView.fadeIn()
         contentViewBottomConstraint.constant = 0
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.5) {
             self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
             self.view.layoutIfNeeded()
         }
@@ -114,12 +113,16 @@ private extension BRQBottomSheetViewController {
         contentView.addSubview(childViewController.view)
         childViewController.didMove(toParent: self)
         
+        guard let childSuperView = childViewController.view.superview else { return }
+
+        
         NSLayoutConstraint.activate([
-            childViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            childViewController.view.topAnchor.constraint(equalTo: view.topAnchor),
-            childViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor),
-            childViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor)
+            childViewController.view.bottomAnchor.constraint(equalTo: childSuperView.bottomAnchor),
+            childViewController.view.topAnchor.constraint(equalTo: childSuperView.topAnchor),
+            childViewController.view.leftAnchor.constraint(equalTo: childSuperView.leftAnchor),
+            childViewController.view.rightAnchor.constraint(equalTo: childSuperView.rightAnchor)
             ])
+        
         childViewController.view.translatesAutoresizingMaskIntoConstraints = false
     }
     
