@@ -10,18 +10,21 @@ import Foundation
 
 public struct BRQBottomSheetViewModel: BRQBottomSheetViewControllerPresentable {
    
-    public var viewCornerRadius: CGFloat
-    public var maxTopConstant: CGFloat
+    public var cornerRadius: CGFloat
     public var animationTransitionDuration: TimeInterval
     public var backgroundColor: UIColor
     
-    public init(viewCornerRadius: CGFloat,
-                maxTopConstant: CGFloat,
+    public init() {
+        cornerRadius = 20
+        animationTransitionDuration = 0.3
+        backgroundColor = UIColor.black.withAlphaComponent(0.5)
+    }
+    
+    public init(cornerRadius: CGFloat,
                 animationTransitionDuration: TimeInterval,
                 backgroundColor: UIColor ) {
         
-        self.viewCornerRadius = viewCornerRadius
-        self.maxTopConstant = maxTopConstant
+        self.cornerRadius = cornerRadius
         self.animationTransitionDuration = animationTransitionDuration
         self.backgroundColor = backgroundColor
     }

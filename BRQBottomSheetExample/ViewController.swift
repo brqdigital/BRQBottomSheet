@@ -14,10 +14,9 @@ class ViewController: UIViewController {
         let myViewController = BottomViewController()
         
         let bottomSheetViewModel = BRQBottomSheetViewModel(
-            viewCornerRadius: 20,
-            maxTopConstant: 40,
+            cornerRadius: 20,
             animationTransitionDuration: 0.3,
-            backgroundColor: .black
+            backgroundColor: UIColor.red.withAlphaComponent(0.5)
         )
         
         let bottomSheetVC = BRQBottomSheetViewController(

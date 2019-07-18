@@ -9,9 +9,7 @@
 import UIKit
 
 public protocol BRQBottomSheetViewControllerPresentable {
-    var viewCornerRadius: CGFloat { get set }
-    var maxTopConstant: CGFloat { get set }
-    
+    var cornerRadius: CGFloat { get set }    
     var animationTransitionDuration: TimeInterval { get set }
     var backgroundColor: UIColor { get set }
 }
@@ -27,15 +25,10 @@ public class BRQBottomSheetViewController: UIViewController {
     @IBOutlet weak private var contentViewHeight: NSLayoutConstraint!
     
     //-----------------------------------------------------------------------------
-    // MARK: - Public properties
-    //-----------------------------------------------------------------------------
-    
-    let viewModel: BRQBottomSheetViewControllerPresentable
-    
-    //-----------------------------------------------------------------------------
     // MARK: - Private properties
     //-----------------------------------------------------------------------------
-    
+   
+    private let viewModel: BRQBottomSheetViewControllerPresentable
     private let childViewController: UIViewController
     private var originBeforeAnimation: CGRect = .zero
     
@@ -89,21 +82,37 @@ public class BRQBottomSheetViewController: UIViewController {
         }
         
         contentViewBottomConstraint.constant = 0
-        UIView.animate(withDuration: 0.5) {
-            self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        UIView.animate(withDuration: viewModel.animationTransitionDuration) {
+            self.view.backgroundColor = self.viewModel.backgroundColor
             self.view.layoutIfNeeded()
         }
     }
     
     override public func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        contentView.roundCorners([.topLeft, .topRight], radius: 20)
+        contentView.roundCorners([.topLeft, .topRight], radius: viewModel.cornerRadius)
         originBeforeAnimation = contentView.frame
     }
 }
 
 //-----------------------------------------------------------------------------
-// MARK: - Private methods
+// MARK: - Public Methods
+//-----------------------------------------------------------------------------
+
+extension BRQBottomSheetViewController {
+    public func dismissViewController() {
+        contentViewBottomConstraint.constant = -childViewController.view.frame.height
+        UIView.animate(withDuration: viewModel.animationTransitionDuration, animations: {
+            self.view.layoutIfNeeded()
+            self.view.backgroundColor = .clear
+        }, completion: { _ in
+            self.dismiss(animated: false, completion: nil)
+        })
+    }
+}
+
+//-----------------------------------------------------------------------------
+// MARK: - Private Methods
 //-----------------------------------------------------------------------------
 
 private extension BRQBottomSheetViewController {
@@ -115,7 +124,6 @@ private extension BRQBottomSheetViewController {
         
         guard let childSuperView = childViewController.view.superview else { return }
 
-        
         NSLayoutConstraint.activate([
             childViewController.view.bottomAnchor.constraint(equalTo: childSuperView.bottomAnchor),
             childViewController.view.topAnchor.constraint(equalTo: childSuperView.topAnchor),
@@ -128,16 +136,6 @@ private extension BRQBottomSheetViewController {
     
     private func shouldDismissWithGesture(_ recognizer: UIPanGestureRecognizer) -> Bool {
         return recognizer.state == .ended
-    }
-    
-    private func dismissViewController() {
-        contentViewBottomConstraint.constant = -childViewController.view.frame.height
-        UIView.animate(withDuration: 0.3, animations: {
-            self.view.layoutIfNeeded()
-            self.view.backgroundColor = .clear
-        }, completion: { _ in
-            self.dismiss(animated: false, completion: nil)
-        })
     }
     
     @objc private func panGesture(_ recognizer: UIPanGestureRecognizer) {
