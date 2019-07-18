@@ -6,7 +6,9 @@
 * **Attention**: The component will only work perfectly if your viewController has all the constraints defined (The ViewController needs to know whether to auto resize)
 
 ## How to Install
-
+* Install the pod
+```pod 'BRQBottomSheet'```
+```import BRQBottomSheet```
 ## How to Use 
 * The framework already contains a ViewModel with two inits, one with some defaults and another fully customizable
 
