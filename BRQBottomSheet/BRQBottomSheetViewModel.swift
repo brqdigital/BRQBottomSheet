@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct BRQBottomSheetViewModel: BRQBottomSheetViewControllerPresentable {
+public struct BRQBottomSheetViewModel: BRQBottomSheetPresentable {
    
     public var cornerRadius: CGFloat
     public var animationTransitionDuration: TimeInterval

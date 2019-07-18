@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol BRQBottomSheetViewControllerPresentable {
+public protocol BRQBottomSheetPresentable {
     var cornerRadius: CGFloat { get set }    
     var animationTransitionDuration: TimeInterval { get set }
     var backgroundColor: UIColor { get set }
@@ -28,7 +28,7 @@ public class BRQBottomSheetViewController: UIViewController {
     // MARK: - Private properties
     //-----------------------------------------------------------------------------
    
-    private let viewModel: BRQBottomSheetViewControllerPresentable
+    private let viewModel: BRQBottomSheetPresentable
     private let childViewController: UIViewController
     private var originBeforeAnimation: CGRect = .zero
     
@@ -36,7 +36,7 @@ public class BRQBottomSheetViewController: UIViewController {
     // MARK: - Initialization
     //-----------------------------------------------------------------------------
     
-    public init(viewModel: BRQBottomSheetViewControllerPresentable, childViewController: UIViewController) {
+    public init(viewModel: BRQBottomSheetPresentable, childViewController: UIViewController) {
         self.viewModel = viewModel
         self.childViewController = childViewController
         super.init(
