@@ -12,18 +12,18 @@
 
 ```swift
 public init() {
-cornerRadius = 20
-animationTransitionDuration = 0.3
-backgroundColor = UIColor.black.withAlphaComponent(0.5)
+    cornerRadius = 20
+    animationTransitionDuration = 0.3
+    backgroundColor = UIColor.black.withAlphaComponent(0.5)
 }
 
 public init(cornerRadius: CGFloat,
-animationTransitionDuration: TimeInterval,
-backgroundColor: UIColor ) {
+            animationTransitionDuration: TimeInterval,
+            backgroundColor: UIColor ) {
 
-self.cornerRadius = cornerRadius
-self.animationTransitionDuration = animationTransitionDuration
-self.backgroundColor = backgroundColor
+    self.cornerRadius = cornerRadius
+    self.animationTransitionDuration = animationTransitionDuration
+    self.backgroundColor = backgroundColor
 }
 ``` 
 * You can also create your own viewModel with some defaults values, you only need your class to implement the 
@@ -35,14 +35,14 @@ self.backgroundColor = backgroundColor
 let myViewController = MyViewController()
 
 let bottomSheetViewModel = BRQBottomSheetViewModel(
-cornerRadius: 20,
-animationTransitionDuration: 0.3,
-backgroundColor: UIColor.red.withAlphaComponent(0.5)
+    cornerRadius: 20,
+    animationTransitionDuration: 0.3,
+    backgroundColor: UIColor.red.withAlphaComponent(0.5)
 )
 
 let bottomSheetVC = BRQBottomSheetViewController(
-viewModel: bottomSheetViewModel,
-childViewController: myViewController
+    viewModel: bottomSheetViewModel,
+    childViewController: myViewController
 )
 
 presentBottomSheet(bottomSheetVC, completion: nil)
